@@ -1,4 +1,4 @@
-day=int(input("enter the day number: "))   
+day=int(input("enter the day number: "))
 if day in [1,8,15,22,29]:
    print("it's Sunday")
 elif day in [2,9,16,23,30]:
@@ -15,4 +15,5 @@ elif day in[7,14,21,28]:
    print("it's Saturday")
 else:
    print("day entered is not correct")
+
       
