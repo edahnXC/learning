@@ -4,4 +4,4 @@ print(x+' '+y)
 
 a='hello'
 b='om'
-print(a[:3]+b+a[-2:])
+print(a[:3]+b+a[3:])
