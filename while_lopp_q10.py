@@ -1,11 +1,14 @@
 n=int(input("Enter the number:"))
-i=0
-j=2
-while j<n:
-    if n%j==0:
-        i+=1
-    j+=1
-if i==0:
-    print(n ,"is prime")
+if n<2:
+    print(n,"is neither prime nor composite")
 else:
-    print(n," is not prime")
+    j=2
+    while j<n:
+        prime=0
+        if n%j==0:
+            prime=1
+        j+=1
+    if prime==0:
+        print(n ,"is prime")
+    else:
+        print(n," is not prime")
