@@ -7,6 +7,7 @@ else:
     while j<n:
         if n%j==0:
             prime=1
+            break
         j+=1
     if prime==0:
         print(n," is prime")
