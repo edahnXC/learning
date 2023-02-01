@@ -1,3 +1,4 @@
+#ques-10 of while loops
 n=int(input("Enter the number: "))
 if n>-1 and n<2:
     print(n,"is neither prime nor composite")
