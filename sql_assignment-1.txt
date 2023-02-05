@@ -1,0 +1,46 @@
+CREATE TABLE Student(
+s_id INT PRIMARY KEY,
+fname VARCHAR(30),
+lname VARCHAR(30),
+Math INT,
+Science INT,  
+Total INT,
+Bdate DATE
+);
+
+#2-insert into Students values
+insert into Students values(001,'Jay','Kumar',90,87,177,'1999-01-01')
+insert into Students values(002,'Ranjeet','Singh',45,56,101,'2000-02-02')
+insert into Students values(003,'Om','Kumar',87,82,169,'2001-03-03')
+insert into Students values(004,'Rauneet','Singh',84,86,170,'2003-05-04')
+insert into Students values(005,'Avinash','Kumar',78,77,155,'2002-09-06')
+
+#3-SELECT MAX(TOTAL) AS MAX_MARKS FROM Student
+
+#4-SELECT MIN(TOTAL) AS MIN_MARKS FROM Student
+
+#5-SELECT * FROM Student WHERE TOTAL= (SELECT MAX(TOTAL) FROM Student)
+
+#6-SELECT * FROM Student WHERE TOTAL= (SELECT MIN(TOTAL) FROM Student)
+
+#7- TO CALCULATE THE PERCENTAGE OF TOPPER(we divide the total marks by the total number of subject and multiply it by 100 and select the entry where total=max(total))
+SELECT (TOTAL/(2*100)) * 100 AS PERCENTAGE FROM Student
+WHERE TOTAL= (SELECT MAX(TOTAL) FROM Student)
+
+#8-SELECT * FROM Student ORDER BY FNAME ASC, LNAME DESC;
+   SELECT * FROM Student ORDER BY LNAME DESC;
+
+#9-SELECT * FROM Student ORDER BY TOTAL ASC;
+  -SELECT * FROM Student ORDER BY TOTAL DESC;
+
+10-Only list where the name starts with A
+SELECT * FROM Student
+WHERE FNAME LIKE 'A%';
+
+11-ELDEST-
+SELECT FNAME,LNAME,BDATE FROM Student
+WHERE BDATE= (SELECT MAX(BDATE) FROM Student)
+
+12-YOUNGEST-
+SELECT FNAME,LNAME,BDATE FROM Student
+WHERE BDATE= (SELECT MIN(BDATE) FROM Student)
