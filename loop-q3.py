@@ -13,13 +13,10 @@ print()
 
 #using while loop
 i=2
-# prime=0
 while i<n:
     if n%i==0:
         print(n,"is not a prime number")   #prime=1
         break
     i+=1
-# if prime==0:
-#     print(n,"is a prime number")
 else:
     print(n,"is a prime number")
